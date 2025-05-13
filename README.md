@@ -1,23 +1,8 @@
 # Microservicios con Docker
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![Docker Compose](https://img.shields.io/badge/docker--compose%20v3.8-blue.svg)](https://docs.docker.com/compose/)
 
-**Una demostración de dos microservicios en Flask, cada uno dentro de su contenedor Docker, orquestados con Docker Compose.**
+**Dos microservicios en Flask, cada uno dentro de su contenedor Docker, con Docker Compose.**
 
----
-
-## 📋 Tabla de Contenidos
-
-1. [Descripción](#descripción)
-2. [Estructura del proyecto](#estructura-del-proyecto)
-3. [Requisitos](#requisitos)
-4. [Instalación y ejecución](#instalación-y-ejecución)
-5. [Uso y endpoints](#uso-y-endpoints)
-6. [Buenas prácticas](#buenas-prácticas)
-7. [Contribuir](#contribuir)
-8. [Licencia](#licencia)
-
----
 
 ## 📝 Descripción
 
@@ -30,22 +15,6 @@ Ambos servicios se ejecutan en contenedores Docker separados y se comunican inte
 
 ---
 
-## 🗂 Estructura del proyecto
-
-```bash
-docker-microservicios/
-├── servicio-usuario/
-│   ├── app.py
-│   ├── requirements.txt
-│   └── Dockerfile
-├── servicio-pedidos/
-│   ├── app.py
-│   ├── requirements.txt
-│   └── Dockerfile
-└── docker-compose.yml
-```
-
----
 
 ## ⚙️ Requisitos
 
@@ -59,8 +28,8 @@ docker-microservicios/
 1. Clona el repositorio:
 
    ```bash
-   git clone https://github.com/tu-usuario/docker-microservicios.git
-   cd docker-microservicios
+   git clone https://github.com/tu-usuario/microservicios-docker.git
+   cd microservicios-docker
    ```
 2. Asegúrate de tener Docker Desktop en modo Linux Containers.
 3. Construye y levanta los servicios:
@@ -100,36 +69,13 @@ curl http://localhost:5000/usuarios
 curl http://localhost:5001/pedidos
 ```
 
----
 
-## 🛠️ Buenas prácticas
+## Imagenes
+![image](https://github.com/user-attachments/assets/955439e1-995f-4efd-9c47-74361adc4d46)
+![image](https://github.com/user-attachments/assets/f59bbc1c-df3d-435f-b9b6-37b9fa9013bb)
 
-* En producción, reemplaza el servidor de desarrollo de Flask por un WSGI (Gunicorn, uWSGI).
-* Utiliza variables de entorno para configuración (puertos, URLs, credenciales).
-* Implementa un contenedor de base de datos (PostgreSQL, MongoDB) para persistencia.
-* Agrega un API Gateway (Traefik, Kong) para enrutamiento y balanceo de carga.
-* Configura pruebas automatizadas y CI/CD con GitHub Actions.
 
----
 
-## 🤝 Contribuir
 
-¡Las contribuciones son bienvenidas!
 
-1. Haz un *fork* del proyecto.
-2. Crea una rama (`git checkout -b feature/nueva-funcionalidad`).
-3. Realiza tus cambios y haz *commit* (`git commit -m 'Agrega nueva funcionalidad'`).
-4. Haz *push* a la rama (`git push origin feature/nueva-funcionalidad`).
-5. Abre un *Pull Request*.
 
-Lee [CONTRIBUTING.md](CONTRIBUTING.md) para más detalles.
-
----
-
-## 📄 Licencia
-
-Este proyecto está bajo la licencia **MIT**. Consulta el archivo [LICENSE](LICENSE) para más información.
-
----
-
-© 2025 Tu Nombre o Tu Organización
