@@ -1,0 +1,12 @@
+services:
+  servicio-usuario:
+    build: ./servicio-usuario
+    ports:
+      - "5000:5000"
+
+  servicio-pedidos:
+    build: ./servicio-pedidos
+    ports:
+      - "5001:5001"
+    depends_on:
+      - servicio-usuario
