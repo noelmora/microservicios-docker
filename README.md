@@ -6,7 +6,7 @@
 
 ## 📝 Descripción
 
-Este repositorio contiene dos microservicios escritos en Python (Flask):
+Este repositorio contiene dos microservicios en Python (Flask):
 
 * **servicio-usuario**: API REST que expone datos de usuarios.
 * **servicio-pedidos**: API REST que consume `servicio-usuario` para enriquecer la información de pedidos.
